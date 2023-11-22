@@ -1,0 +1,23 @@
+.underweight_bg {
+  background-color: #00abda;
+}
+
+.normalWeight_bg {
+  background-color: #04ff00;
+}
+
+.overweight_bg {
+  background-color: #f0b639;
+}
+
+.obesity_one_bg {
+  background-color: #da0000;
+}
+
+.obesity_two_bg {
+  background-color: #870000;
+}
+
+.obesity_three_bg {
+  background-color: #7c0303;
+}
