@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/output.css" />
+    <link rel="stylesheet" href="/src/css/colors.css" />
+    <script
+      src="https://kit.fontawesome.com/f68da14a21.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>BMI Calculator</title>
+  </head>
+  <body
+    class="w-screen h-screen bg-slate-800 flex justify-center items-center align-middle sm:flex-col md:flex-row"
+  >
+    <main
+      class="bg-slate-300 md:rounded-s-full bg-opacity-50 md:p-24 flex justify-center items-center sm:rounded-t-full sm:p-20 md:rounded-r-none md:rounded-e-full"
+    >
+      <table class="text-left w-80 leading-8 indent-1">
+        <tr class="text-violet-950 text-2xl">
+          <th>BMI</th>
+          <th>Categories</th>
+        </tr>
+        <tr
+          id="underweight_table"
+          class="border-b border-violet-300 duration-500"
+        >
+          <td>Under 18.5</td>
+          <td>Underweight</td>
+        </tr>
+        <tr id="normal_weight" class="border-b border-violet-300 duration-500">
+          <td>Between 18.6 and 24.9</td>
+          <td>Normal weight</td>
+        </tr>
+        <tr
+          id="overweight_table"
+          class="border-b border-violet-300 duration-500"
+        >
+          <td>Between 25 and 29.9</td>
+          <td>Overweight</td>
+        </tr>
+        <tr id="obesity_one" class="border-b border-violet-300 duration-500">
+          <td>Between 30 and 34.9</td>
+          <td>Obesity grade I</td>
+        </tr>
+        <tr id="obesity_two" class="border-b border-violet-300 duration-500">
+          <td>Between 35 and 39.9</td>
+          <td>Obesity grade II</td>
+        </tr>
+        <tr id="obesity_three" class="border-b border-violet-300 duration-500">
+          <td>Above 40</td>
+          <td>Obesity grade III</td>
+        </tr>
+      </table>
+    </main>
+
+    <!-- Second main -->
+    <main
+      class="text-center space-y-5 bg-violet-900 sm:rounded-b-full p-16 md:rounded-l-none md:rounded-e-full bg-opacity-50 flex justify-center items-center flex-col w-auto"
+    >
+      <div class="flex justify-center items-center gap-3 sm:flex-col">
+        <i
+          class="fa-solid fa-weight-scale text-5xl sm:text-7xl"
+          style="color: #ba00c7"
+        ></i>
+        <h1 class="text-2xl text-purple-200 italic">BMI Calculator</h1>
+      </div>
+      <form id="formu" class="space-y-8">
+        <article class="flex gap-3">
+          <div class="border border-violet-400 p-6 rounded-full">
+            <section class="mb-2">
+              <label
+                for="height"
+                class="block text-center text-xl mb-2 text-violet-300"
+                >Height</label
+              >
+              <input
+                type="text"
+                id="height"
+                placeholder="e.g 179cm"
+                required
+                class="outline-none border-b border-b-slate-500 w-24 p-1.5 bg-transparent text-center text-slate-200"
+              />
+            </section>
+          </div>
+          <div class="border border-violet-400 p-6 rounded-full">
+            <section class="mb-4">
+              <label
+                for="weight"
+                class="block text-center text-xl mb-2 text-violet-300"
+                >Weight</label
+              >
+              <input
+                type="text"
+                id="weight"
+                placeholder="e.g 75kg"
+                required
+                class="outline-none border-b border-b-slate-500 w-24 p-1.5 bg-transparent text-center text-slate-200"
+              />
+            </section>
+          </div>
+        </article>
+        <div class="space-y-5">
+          <input
+            type="submit"
+            class="border border-purple-700 p-2 rounded-full cursor-pointer mt-2 w-3/4 text-slate-300 hover:border-violet-400 hover:bg-violet-400 hover:bg-opacity-10 duration-300"
+            value="Send"
+          />
+          <input
+            id="reset-btn"
+            type="reset"
+            class="border border-violet-400 p-2 rounded-full cursor-pointer w-3/4 text-slate-300 hover:border-red-400 hover:bg-red-400 hover:bg-opacity-10 duration-300"
+            value="Reset"
+          />
+        </div>
+      </form>
+      <div>
+        <p
+          id="result"
+          class="text-slate-100 text-lg opacity-0 transition-opacity duration-500"
+        ></p>
+      </div>
+    </main>
+  </body>
+  <script src="/src/js/index.js"></script>
+</html>
